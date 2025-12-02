@@ -1,0 +1,318 @@
+/* Premium template browser */
+
+:root {
+  --tpl-bg: #0f172a;
+  --tpl-card: #0b1221;
+  --tpl-border: rgba(255, 255, 255, 0.08);
+  --tpl-text: #e2e8f0;
+  --tpl-muted: #94a3b8;
+  --tpl-accent: #a855f7;
+  --tpl-radius: 18px;
+  --tpl-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.tpl-page {
+  min-height: 100vh;
+  background: radial-gradient(circle at 20% 20%, rgba(168, 85, 247, 0.08), transparent 30%),
+    radial-gradient(circle at 80% 0%, rgba(45, 212, 191, 0.08), transparent 25%),
+    var(--tpl-bg);
+  padding: 32px 28px 64px;
+  color: var(--tpl-text);
+  font-family: "Inter", system-ui, sans-serif;
+  position: relative;
+}
+
+.tpl-header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 16px;
+  background: var(--tpl-card);
+  border: 1px solid var(--tpl-border);
+  border-radius: var(--tpl-radius);
+  padding: 18px 20px;
+  box-shadow: var(--tpl-shadow);
+  margin-bottom: 16px;
+}
+
+.tpl-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tpl-logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.tpl-name {
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+}
+
+.tpl-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.tpl-search {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tpl-search input {
+  border: 1px solid var(--tpl-border);
+  border-radius: 12px;
+  padding: 10px 12px;
+  min-width: 220px;
+  font-size: 14px;
+  background: #0f172a;
+  color: var(--tpl-text);
+}
+
+.tpl-search button {
+  border: none;
+  border-radius: 12px;
+  padding: 10px 14px;
+  background: var(--tpl-accent);
+  color: #0b1221;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 10px 18px rgba(168, 85, 247, 0.25);
+}
+
+.tpl-filters {
+  background: var(--tpl-card);
+  border: 1px solid var(--tpl-border);
+  border-radius: var(--tpl-radius);
+  padding: 12px 16px;
+  box-shadow: var(--tpl-shadow);
+  margin-bottom: 16px;
+}
+
+.tpl-filters label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: var(--tpl-muted);
+}
+
+.tpl-filters select {
+  border: 1px solid var(--tpl-border);
+  border-radius: 10px;
+  padding: 8px 10px;
+  background: #0f172a;
+  color: var(--tpl-text);
+  font-size: 14px;
+}
+
+.tpl-hero {
+  background: var(--tpl-card);
+  border: 1px solid var(--tpl-border);
+  border-radius: var(--tpl-radius);
+  padding: 18px 18px 22px;
+  box-shadow: var(--tpl-shadow);
+  margin-bottom: 20px;
+}
+
+.tpl-hero-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.tpl-overline {
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--tpl-muted);
+}
+
+.tpl-hero-title {
+  margin: 2px 0 0;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.tpl-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.tpl-grid.hero-grid .tpl-thumb {
+  min-height: 180px;
+}
+
+.tpl-card {
+  background: #0c1629;
+  border: 1px solid var(--tpl-border);
+  border-radius: var(--tpl-radius);
+  box-shadow: var(--tpl-shadow);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tpl-thumb {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--tpl-border);
+  background: #0f172a;
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tpl-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tpl-thumb.tall {
+  min-height: 180px;
+}
+
+.tpl-fallback {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: var(--tpl-muted);
+}
+
+.tpl-card-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--tpl-text);
+}
+
+.tpl-card-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.tpl-btn {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--tpl-border);
+  text-align: center;
+  font-weight: 700;
+  font-size: 13px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.tpl-btn.ghost {
+  background: transparent;
+  color: var(--tpl-text);
+}
+
+.tpl-btn.primary {
+  background: var(--tpl-accent);
+  color: #0b1221;
+  border-color: var(--tpl-accent);
+  box-shadow: 0 10px 18px rgba(168, 85, 247, 0.25);
+}
+
+.tpl-section {
+  margin-bottom: 26px;
+  padding: 14px;
+  background: var(--tpl-card);
+  border: 1px solid var(--tpl-border);
+  border-radius: var(--tpl-radius);
+  box-shadow: var(--tpl-shadow);
+}
+
+.tpl-section-head h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.tpl-mode-sidebar {
+  position: fixed;
+  right: 28px;
+  top: 120px;
+  width: 220px;
+  background: var(--tpl-card);
+  border: 1px solid var(--tpl-border);
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: var(--tpl-shadow);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.tpl-mode-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tpl-mode-sidebar button {
+  width: 100%;
+  text-align: left;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--tpl-border);
+  background: #0f172a;
+  color: var(--tpl-text);
+  font-weight: 700;
+  cursor: pointer;
+  transition: border 0.15s ease, box-shadow 0.15s ease;
+}
+
+.tpl-mode-sidebar button.is-active {
+  background: var(--tpl-accent);
+  color: #0b1221;
+  border-color: var(--tpl-accent);
+  box-shadow: 0 12px 28px rgba(168, 85, 247, 0.35);
+}
+
+@media (max-width: 1024px) {
+  .tpl-header {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .tpl-mode-sidebar {
+    position: static;
+    width: 100%;
+    max-height: none;
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tpl-page {
+    padding: 20px 16px 48px;
+  }
+
+  .tpl-search input {
+    width: 100%;
+  }
+
+  .tpl-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}

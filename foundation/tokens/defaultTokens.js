@@ -1,0 +1,42 @@
+export const defaultTokens = {
+  "primary.brand": {
+    id: "primary.brand",
+    name: "Primary / Brand",
+    type: "color",
+    value: "#6C4BFF",
+    group: "Brand Colors",
+    aliasTo: null,
+  },
+  "primary.600": {
+    id: "primary.600",
+    name: "Primary / 600",
+    type: "color",
+    value: "#5634E0",
+    group: "Brand Colors",
+    aliasTo: null,
+  },
+  "primary.brandHover": {
+    id: "primary.brandHover",
+    name: "Primary / Brand Hover",
+    type: "color",
+    value: null,
+    aliasTo: "primary.600",
+    group: "Brand Colors",
+  },
+  "text.default": {
+    id: "text.default",
+    name: "Text / Default",
+    type: "color",
+    value: "#FFFFFF",
+    group: "Typography",
+    aliasTo: null,
+  },
+  "surface.background": {
+    id: "surface.background",
+    name: "Surface / Background",
+    type: "color",
+    value: "#11111B",
+    group: "Surfaces",
+    aliasTo: null,
+  },
+};

@@ -1,0 +1,110 @@
+.mode-picker {
+  min-height: 100vh;
+  width: 100%;
+  background: radial-gradient(circle at 20% 20%, rgba(120, 119, 198, 0.18), transparent 35%),
+    radial-gradient(circle at 80% 10%, rgba(56, 189, 248, 0.18), transparent 30%),
+    radial-gradient(circle at 40% 80%, rgba(16, 185, 129, 0.18), transparent 32%),
+    #080915;
+  color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px 56px;
+}
+
+.mode-panel {
+  width: min(1200px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mode-kicker {
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.mode-title {
+  font-size: clamp(28px, 4vw, 38px);
+  font-weight: 700;
+  color: #f9fafb;
+  margin: 0;
+}
+
+.mode-subtitle {
+  color: #cbd5e1;
+  margin: 0;
+  max-width: 720px;
+}
+
+.mode-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.mode-card {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #0b0f1a;
+  text-decoration: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+  background-color: #0f172a;
+}
+
+.mode-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.mode-pill {
+  font-weight: 700;
+  font-size: 16px;
+  color: #0b0f1a;
+}
+
+.mode-tag {
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  color: #0b0f1a;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.mode-desc {
+  margin: 0;
+  color: #0b0f1a;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.mode-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.24);
+}
+
+@media (max-width: 720px) {
+  .mode-picker {
+    padding: 32px 18px 40px;
+  }
+
+  .mode-card-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

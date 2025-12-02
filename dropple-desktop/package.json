@@ -1,0 +1,41 @@
+{
+  "name": "dropple-desktop",
+  "version": "1.0.0",
+  "description": "Dropple Desktop App",
+  "main": "main.js",
+  "scripts": {
+    "dev": "concurrently \"npm run next\" \"npm run electron:dev\"",
+    "next": "cd .. && npm run dev",
+    "electron:dev": "cross-env NODE_ENV=development electron .",
+    "build": "electron-builder"
+  },
+  "dependencies": {
+    "electron": "^28.2.0",
+    "electron-store": "^8.1.0",
+    "electron-updater": "^6.1.6"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "cross-env": "^7.0.3",
+    "electron-builder": "^24.9.2"
+  },
+  "build": {
+    "appId": "com.dropple.app",
+    "productName": "Dropple",
+    "directories": {
+      "output": "build"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "src/**/*"
+    ],
+    "mac": {
+      "category": "public.app-category.graphics-design",
+      "icon": "assets/icon.icns"
+    },
+    "win": {
+      "icon": "assets/icon.ico"
+    }
+  }
+}

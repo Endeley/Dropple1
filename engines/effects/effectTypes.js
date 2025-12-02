@@ -1,0 +1,15 @@
+export const EFFECT_TYPES = {
+    SHADOW: 'shadow',
+    OUTER_GLOW: 'outerGlow',
+    INNER_GLOW: 'innerGlow',
+    BLUR: 'blur',
+    BACKGROUND_BLUR: 'backgroundBlur',
+    BLEND_MODE: 'blendMode',
+    SATURATION: 'saturation',
+    BRIGHTNESS: 'brightness',
+    CONTRAST: 'contrast',
+    HUE: 'hue',
+    LUT: 'lut',
+    GRADIENT_OVERLAY: 'gradientOverlay',
+    STROKE: 'stroke',
+};

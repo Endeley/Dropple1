@@ -1,0 +1,16 @@
+export const TEMPLATE_CATEGORIES = [
+    'Social Media',
+    'Instagram Post',
+    'Instagram Story',
+    'Flyer',
+    'Poster',
+    'Business Card',
+    'Resume',
+    'Presentation',
+    'Thumbnails',
+    'UI Blocks',
+    'Marketing',
+    'Ecommerce',
+    'Brand Kits',
+    'General',
+];
